@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   _main.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/24 10:58:52 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/25 00:12:58 by wshela           ###   ########.fr       */
+/*   Created: 2019/06/24 23:29:54 by wshela            #+#    #+#             */
+/*   Updated: 2019/06/25 00:39:03 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+unsigned char	reverse_bits(unsigned char octet);
 
-void	print_bits(unsigned char octet)
+int	main(void)
 {
-	int		str[8];
-	int		i;
-	char	res;
+	unsigned char	octet;
 
-	i = 0;
-	while (i < 8)
-	{
-		str[i] = octet % 2;
-		octet = octet / 2;
-		i++;
-	}
-	i--;
-	while (i >= 0)
-	{
-		res = str[i] + '0';
-		write(1, &res, 1);
-		i--;
-	}
+	octet = 2;
+	reverse_bits(octet);
+	return (0);
 }

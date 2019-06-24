@@ -6,13 +6,13 @@
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 10:58:52 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/25 00:12:58 by wshela           ###   ########.fr       */
+/*   Updated: 2019/06/25 00:22:49 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_bits(unsigned char octet)
+unsigned char	reverse_bits(unsigned char octet)
 {
 	int		str[8];
 	int		i;
@@ -25,11 +25,12 @@ void	print_bits(unsigned char octet)
 		octet = octet / 2;
 		i++;
 	}
-	i--;
-	while (i >= 0)
+	i = 0;
+	while (i < 8)
 	{
 		res = str[i] + '0';
 		write(1, &res, 1);
-		i--;
+		i++;
 	}
+	return (0);
 }

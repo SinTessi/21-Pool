@@ -6,30 +6,35 @@
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 10:58:52 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/25 00:12:58 by wshela           ###   ########.fr       */
+/*   Updated: 2019/06/25 01:09:31 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_bits(unsigned char octet)
+unsigned char	swap_bits(unsigned char octet)
 {
-	int		str[8];
+	char	str[8];
 	int		i;
-	char	res;
 
 	i = 0;
 	while (i < 8)
 	{
-		str[i] = octet % 2;
+		str[i] = octet % 2 + '0';
 		octet = octet / 2;
 		i++;
 	}
-	i--;
-	while (i >= 0)
+	i = 4;
+	while (i < 8)
 	{
-		res = str[i] + '0';
-		write(1, &res, 1);
-		i--;
+		write(1, &str[i], 1);
+		i++;
 	}
+	i = 0;
+	while (i < 4)
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (0);
 }
