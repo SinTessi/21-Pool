@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   _main.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/24 10:58:52 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/24 23:53:47 by wshela           ###   ########.fr       */
+/*   Created: 2019/06/24 23:29:54 by wshela            #+#    #+#             */
+/*   Updated: 2019/06/24 23:53:21 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	print_bits(unsigned char octet);
 
-void	print_bits(unsigned char octet)
+int		main(void)
 {
-	int		str[8];
-	int		i;
-	char	res;
+	unsigned char octet;
 
-	i = 0;
-	while (i < 8)
-	{
-		str[i] = octet % 2;
-		octet = octet / 2;
-		i++;
-	}
-	while (i < 8)
-	{
-		str[i] = 0;
-		i++;
-	}
-	while (i >= 0)
-	{
-		res = str[i] + '0';
-		write(1, &res, 1);
-		i--;
-	}
+	octet = 2;
+	print_bits(octet);
+	return (0);
 }
