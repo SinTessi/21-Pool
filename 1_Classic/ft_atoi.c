@@ -6,7 +6,7 @@
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/22 17:20:35 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/22 23:24:32 by wshela           ###   ########.fr       */
+/*   Updated: 2019/06/25 23:12:04 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,10 @@ int		ft_atoi(char *str)
 	}
 	if (str[i] == '+')
 		i++;
-	else
-		while (str[i] >= '0' && str[i] <= '9')
-		{
-			res = res * 10 + str[i] - '0';
-			i++;
-		}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
 	return (res * neg);
 }
