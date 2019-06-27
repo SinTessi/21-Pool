@@ -6,7 +6,7 @@
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 23:29:54 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/25 00:39:03 by wshela           ###   ########.fr       */
+/*   Updated: 2019/06/27 16:50:40 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(void)
 {
 	unsigned char	octet;
 
-	octet = 2;
+	octet = '4';
 	reverse_bits(octet);
 	return (0);
 }
