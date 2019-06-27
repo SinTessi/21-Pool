@@ -6,11 +6,9 @@
 /*   By: wshela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 10:58:52 by wshela            #+#    #+#             */
-/*   Updated: 2019/06/27 16:49:08 by wshela           ###   ########.fr       */
+/*   Updated: 2019/06/27 18:33:09 by wshela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 unsigned char	reverse_bits(unsigned char octet)
 {
@@ -49,5 +47,5 @@ unsigned char	reverse_bits(unsigned char octet)
 			i++;
 		}
 	}
-	return (0);
+	return (res);
 }
